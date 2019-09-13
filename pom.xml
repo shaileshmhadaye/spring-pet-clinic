@@ -40,7 +40,7 @@
 		</plugins>
 	</build>
 	<scm>
-		<developerConnection>scm:git:</developerConnection>
+		<developerConnection>scm:git:https://github.com/shaileshmhadaye/spring-pet-clinic</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
