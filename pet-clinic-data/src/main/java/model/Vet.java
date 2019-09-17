@@ -1,7 +1,22 @@
 package model;
 
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Table(name = "vets")
 public class Vet extends Person{
-    public Vet(Long id, String firstname, String lastname) {
-        super(id, firstname, lastname);
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "specialities", joinColumns = @JoinColumn(name = "vet_id"), inverseJoinColumns = @JoinColumn(name = "speciality_id"))
+    private Set<Speciality> specialitySet = new HashSet<>();
+
+    public Set<Speciality> getSpecialitySet() {
+        return specialitySet;
+    }
+
+    public void setSpecialitySet(Set<Speciality> specialitySet) {
+        this.specialitySet = specialitySet;
     }
 }

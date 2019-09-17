@@ -1,21 +1,23 @@
 package model;
 
+import javax.persistence.*;
 import java.util.Set;
 
+@Entity
+@Table(name = "owners")
 public class Owner extends Person{
 
+    @Column(name = "address")
     private String address;
-    private String city;
-    private String telephone;
-    private Set<Pet> pets;
 
-    public Owner(Long id, String firstname, String lastname, String address, String city, String telephone, Set<Pet> pets) {
-        super(id, firstname, lastname);
-        this.address = address;
-        this.city = city;
-        this.telephone = telephone;
-        this.pets = pets;
-    }
+    @Column(name = "city")
+    private String city;
+
+    @Column(name = "telephone")
+    private String telephone;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owners")
+    private Set<Pet> pets;
 
     public String getAddress() {
         return address;
