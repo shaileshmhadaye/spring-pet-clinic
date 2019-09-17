@@ -9,8 +9,12 @@ public class Owner extends Person{
     private String telephone;
     private Set<Pet> pets;
 
-    public Owner(Long id, String firstname, String lastname) {
+    public Owner(Long id, String firstname, String lastname, String address, String city, String telephone, Set<Pet> pets) {
         super(id, firstname, lastname);
+        this.address = address;
+        this.city = city;
+        this.telephone = telephone;
+        this.pets = pets;
     }
 
     public String getAddress() {
