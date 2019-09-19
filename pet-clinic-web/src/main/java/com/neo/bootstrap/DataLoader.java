@@ -1,11 +1,11 @@
 package com.neo.bootstrap;
 
-import model.Owner;
-import model.Vet;
+import com.neo.model.Owner;
+import com.neo.model.Vet;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import services.OwnerService;
-import services.VetService;
+import com.neo.services.OwnerService;
+import com.neo.services.VetService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
