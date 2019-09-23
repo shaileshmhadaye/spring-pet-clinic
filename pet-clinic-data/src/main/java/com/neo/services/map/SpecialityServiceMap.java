@@ -2,9 +2,11 @@ package com.neo.services.map;
 
 import com.neo.model.Speciality;
 import com.neo.services.SpecialityService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class SpecialityServiceMap extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
     public Set<Speciality> findAll() {
