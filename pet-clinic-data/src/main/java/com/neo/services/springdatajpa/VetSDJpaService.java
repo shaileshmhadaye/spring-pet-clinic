@@ -3,6 +3,7 @@ package com.neo.services.springdatajpa;
 import com.neo.model.Vet;
 import com.neo.repositories.VetRepository;
 import com.neo.services.VetService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
+@Primary
 public class VetSDJpaService implements VetService {
 
     private final VetRepository vetRepository;

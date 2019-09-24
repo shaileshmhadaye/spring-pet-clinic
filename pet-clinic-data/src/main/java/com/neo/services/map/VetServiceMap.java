@@ -1,12 +1,14 @@
 package com.neo.services.map;
 
 import com.neo.model.Vet;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import com.neo.services.VetService;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
